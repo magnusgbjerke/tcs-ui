@@ -25,18 +25,16 @@ export function Input({
   };
 
   return (
-    <>
-      <input
-        type="text"
-        id="user-input"
-        value={value}
-        className={`${baseStyles} ${disabled ? "cursor-not-allowed" : ""}  ${
-          sizeStyles[size]
-        } ${className}`}
-        disabled={disabled}
-        onChange={(e) => onChange(e.target.value)}
-        placeholder={placeholder}
-      />
-    </>
+    <input
+      type="text"
+      id="user-input"
+      value={value}
+      className={`${baseStyles} ${disabled ? "cursor-not-allowed" : ""}  ${
+        sizeStyles[size]
+      } ${className}`}
+      disabled={disabled}
+      onChange={(e) => onChange(e.target.value)}
+      placeholder={placeholder}
+    />
   );
 }
