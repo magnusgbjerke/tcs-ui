@@ -32,4 +32,4 @@
 
 | Property | Type   | Default value | Description                                                                                                                                      |
 | -------- | ------ | ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
-| stock    | number | -             | How many items in stock. 0 in stock makes the indicator red. 5 or less in stock makes the indicator yellor. 5 or more makes the indicator green. |
+| stock    | number | -             | How many items in stock. 0 in stock makes the indicator red. 5 or less in stock makes the indicator yellow. 5 or more makes the indicator green. |
