@@ -25,3 +25,11 @@
 | averageRating | float                   | -             | Insert a rating/score between 1 and 5(eg. 2.11, 3.66 or 4.78).                        |
 | disabled?     | boolean                 | false         | A boolean to indicate whether the component is disabled.                              |
 | onClick       | (index: number) => void | -             | Function triggered on click events. Index is the index of hangers from left to right. |
+
+### Stock Indicator
+
+**Props**
+
+| Property | Type   | Default value | Description                                                                                                                                      |
+| -------- | ------ | ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| stock    | number | -             | How many items in stock. 0 in stock makes the indicator red. 5 or less in stock makes the indicator yellor. 5 or more makes the indicator green. |

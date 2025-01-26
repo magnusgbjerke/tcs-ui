@@ -3,11 +3,12 @@ import { ButtonDisplay } from "./displays/ButtonDisplay";
 import { CheckboxDisplay } from "./displays/CheckboxDisplay";
 import { HangerRatingDisplay } from "./displays/HangerRatingDisplay";
 import { InputDisplay } from "./displays/InputDisplay";
+import { StockIndicatorDisplay } from "./displays/StockIndicatorDisplay";
 
 function Test() {
   const Seperator = () => {
     return (
-      <p className="text-3xl mt-5 mb-5">
+      <p className="text-3xl mt-5">
         __________________________________________________________________________
       </p>
     );
@@ -24,6 +25,7 @@ function Test() {
       <Seperator />
       <HangerRatingDisplay />
       <Seperator />
+      <StockIndicatorDisplay />
     </>
   );
 }
