@@ -1,11 +1,22 @@
 import { BreadcrumbsDisplay } from "./displays/BreadcrumbsDisplay";
 import { ButtonDisplay } from "./displays/ButtonDisplay";
+import { CardDisplay } from "./displays/card-display/CardDisplay";
 import { CheckboxDisplay } from "./displays/CheckboxDisplay";
 import { HangerRatingDisplay } from "./displays/HangerRatingDisplay";
 import { InputDisplay } from "./displays/InputDisplay";
 import { StockIndicatorDisplay } from "./displays/StockIndicatorDisplay";
 
-function Test() {
+export default function Test() {
+  let items: Array<JSX.Element> = [
+    <ButtonDisplay />,
+    <InputDisplay />,
+    <BreadcrumbsDisplay />,
+    <CheckboxDisplay />,
+    <HangerRatingDisplay />,
+    <StockIndicatorDisplay />,
+    <CardDisplay />,
+  ];
+
   const Seperator = () => {
     return (
       <p className="text-3xl mt-5">
@@ -15,19 +26,12 @@ function Test() {
   };
   return (
     <>
-      <ButtonDisplay />
-      <Seperator />
-      <InputDisplay />
-      <Seperator />
-      <BreadcrumbsDisplay />
-      <Seperator />
-      <CheckboxDisplay />
-      <Seperator />
-      <HangerRatingDisplay />
-      <Seperator />
-      <StockIndicatorDisplay />
+      {items.map((item, index) => (
+        <div key={index} className="p-2">
+          {item}
+          <Seperator />
+        </div>
+      ))}
     </>
   );
 }
-
-export default Test;
