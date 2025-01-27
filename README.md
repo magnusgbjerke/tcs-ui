@@ -42,3 +42,13 @@
 | -------- | --------------- | ------------- | ---------------------------------------------------------------------------- |
 | children | React.ReactNode | -             | Pass elements or content between the opening and closing tags the component. |
 | img      | string          | -             | Image that is going to be displayed.                                         |
+
+### Searchbar
+
+**Props**
+
+| Property    | Type                    | Default value | Description                                                                 |
+| ----------- | ----------------------- | ------------- | --------------------------------------------------------------------------- |
+| placeholder | string                  | -             | -                                                                           |
+| data        | string[]                | -             | Pass an array of params that the user can search for.                       |
+| onSearch    | (query: string) => void | -             | Function triggered on search events. Query is the query the user is making. |

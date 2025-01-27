@@ -4,6 +4,7 @@ import { CardDisplay } from "./displays/card-display/CardDisplay";
 import { CheckboxDisplay } from "./displays/CheckboxDisplay";
 import { HangerRatingDisplay } from "./displays/HangerRatingDisplay";
 import { InputDisplay } from "./displays/InputDisplay";
+import { SearchbarDisplay } from "./displays/SearchbarDisplay";
 import { StockIndicatorDisplay } from "./displays/StockIndicatorDisplay";
 
 export default function Test() {
@@ -15,6 +16,7 @@ export default function Test() {
     <HangerRatingDisplay />,
     <StockIndicatorDisplay />,
     <CardDisplay />,
+    <SearchbarDisplay />,
   ];
 
   const Seperator = () => {
