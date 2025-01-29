@@ -1,20 +1,32 @@
+"use client";
+
 import React, { useEffect, useRef, useState } from "react";
 
 interface SearchbarProps {
   placeholder: string;
   data: string[];
   onSearch: (query: string) => void;
+  size?: "xs" | "sm" | "md" | "lg" | "full";
 }
 
 export const Searchbar: React.FC<SearchbarProps> = ({
   placeholder,
   data,
   onSearch,
+  size = "md",
 }) => {
   const [query, setQuery] = useState("");
   const [filteredData, setFilteredData] = useState<string[]>([]);
   const [isOpen, setIsOpen] = useState(false);
   const searchBarRef = useRef<HTMLDivElement | null>(null);
+
+  const sizeStyles = {
+    xs: "max-w-xs",
+    sm: "max-w-sm",
+    md: "max-w-md",
+    lg: "max-w-lg",
+    full: "",
+  };
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setQuery(e.target.value);
@@ -56,7 +68,7 @@ export const Searchbar: React.FC<SearchbarProps> = ({
   }, []);
 
   return (
-    <div ref={searchBarRef} className="w-full max-w-md">
+    <div ref={searchBarRef} className={`w-full ${sizeStyles[size]}`}>
       {/* Search bar */}
       <div className="flex items-center bg-white border border-primary-300 rounded-lg shadow-sm focus-within:ring-2 focus-within:ring-primary-500">
         <input
@@ -79,13 +91,15 @@ export const Searchbar: React.FC<SearchbarProps> = ({
 
       {/* Display filtered results */}
       {isOpen && query !== "" && (
-        <ul className="mt-2 bg-white border border-gray-300 rounded-lg shadow-sm max-h-60 overflow-auto">
+        <ul
+          className={`mt-2 bg-white border border-gray-300 rounded-lg shadow-sm absolute w-full ${sizeStyles[size]}`}
+        >
           {filteredData.length > 0 ? (
             filteredData.map((item, index) => (
               <li
                 key={index}
                 onClick={() => onSearch(item.toLowerCase())}
-                className="px-4 py-2 cursor-pointer hover:bg-primary-100 text-primary-900"
+                className="px-4 py-2 cursor-pointer rounded-lg hover:bg-primary-100 text-primary-900"
               >
                 {item}
               </li>

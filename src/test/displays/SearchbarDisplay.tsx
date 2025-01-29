@@ -20,6 +20,7 @@ export function SearchbarDisplay() {
         placeholder="Search for products..."
         data={exampleData}
         onSearch={(query) => alert(`Value: ${query}`)}
+        size="xs"
       />
     </>
   );
