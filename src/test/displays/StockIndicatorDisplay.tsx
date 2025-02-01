@@ -5,7 +5,7 @@ export function StockIndicatorDisplay() {
   const [state, setState] = useState(7);
   return (
     <>
-      <p className="text-3xl underline">Stock Indicator</p>
+      <p className="text-3xl underline p-2">Stock Indicator</p>
       <p>Stock:</p>
       <p>0 = red</p>
       <p>5 or less = yellow</p>

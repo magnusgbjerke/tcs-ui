@@ -10,7 +10,7 @@ export function InputDisplay() {
 
   return (
     <>
-      <p className="text-3xl underline">Input</p>
+      <p className="text-3xl underline p-2">Input</p>
       <Input
         size="sm"
         value={state}

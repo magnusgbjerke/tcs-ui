@@ -9,7 +9,7 @@ export function BreadcrumbsDisplay() {
 
   return (
     <>
-      <p className="text-3xl underline">Breadcrumbs</p>
+      <p className="text-3xl underline p-2">Breadcrumbs</p>
       <Breadcrumbs items={itemsMockUp} />
     </>
   );

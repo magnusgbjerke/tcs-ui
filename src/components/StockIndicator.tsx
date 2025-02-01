@@ -1,6 +1,6 @@
-type Props = {
+interface Props {
   stock: number;
-};
+}
 
 type StockStatus = "many" | "some" | "empty";
 

@@ -6,7 +6,7 @@ export function ButtonDisplay() {
 
   return (
     <>
-      <p className="text-3xl underline">Button</p>
+      <p className="text-3xl underline p-2">Button</p>
       <Button
         size="sm"
         onClick={() => {

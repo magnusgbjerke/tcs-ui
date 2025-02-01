@@ -8,7 +8,7 @@ export function HangerRatingDisplay() {
 
   return (
     <>
-      <p className="text-3xl underline">Hanger Rating</p>
+      <p className="text-3xl underline p-2">Hanger Rating</p>
       <input
         type="number"
         id="user-input"

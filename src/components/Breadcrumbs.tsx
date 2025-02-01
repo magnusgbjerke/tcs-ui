@@ -1,11 +1,11 @@
-export interface items {
+export interface Items {
   title: string;
   href: string;
 }
 
-type Props = {
-  items: Array<items> | [];
-};
+interface Props {
+  items: Array<Items> | [];
+}
 
 export function Breadcrumbs({ items = [] }: Props) {
   return (
