@@ -1,10 +1,10 @@
-import { Breadcrumbs, items } from "../../components/Breadcrumbs";
+import { Breadcrumbs, BreadcrumbItem } from "../../components/Breadcrumbs";
 
 export function BreadcrumbsDisplay() {
-  const itemsMockUp: Array<items> = [
-    { title: "title1", href: "#1" },
-    { title: "title2", href: "#2" },
-    { title: "title3", href: "#3" },
+  const itemsMockUp: Array<BreadcrumbItem> = [
+    { title: "home", href: "/" },
+    { title: "men", href: "/men" },
+    { title: "clothes", href: "/men/clothes" },
   ];
 
   return (
