@@ -24,14 +24,12 @@ export const Navbar = () => {
               <strong>[Button: Kids]</strong>
             </Link>
           </div>
-          <div className="absolute left-1/2 transform -translate-x-1/2">
-            middle
-          </div>
+          <div className="absolute left-1/2 transform -translate-x-1/2"></div>
           <div className="flex">
             <Searchbar
               placeholder={"Search for products..."}
               data={mockSearch}
-              onSearch={(q) => console.log(q)}
+              onSearch={() => {}}
               size="xs"
             />
             <p className="text-nowrap">[Icon: Profile]</p>
