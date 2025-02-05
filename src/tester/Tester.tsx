@@ -7,7 +7,7 @@ import { InputDisplay } from "./displays/InputDisplay";
 import { SearchbarDisplay } from "./displays/SearchbarDisplay";
 import { StockIndicatorDisplay } from "./displays/StockIndicatorDisplay";
 
-export default function Test() {
+export default function Tester() {
   let items: Array<JSX.Element> = [
     <ButtonDisplay />,
     <InputDisplay />,
