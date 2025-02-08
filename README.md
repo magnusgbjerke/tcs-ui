@@ -25,6 +25,7 @@
 | averageRating | float                   | -             | Rating/score between 1 and 5(eg. 2.11, 3.66 or 4.78).                                 |
 | disabled?     | boolean                 | false         | A boolean to indicate whether the component is disabled.                              |
 | onClick       | (index: number) => void | -             | Function triggered on click events. Index is the index of hangers from left to right. |
+| width?        | number                  | 100           | Width of component.                                                                   |
 
 ### Stock Indicator
 
