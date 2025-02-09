@@ -8,7 +8,7 @@ export function Checkbox({ checked = false }: Props) {
   return (
     <div className="ml-4">
       <input type="checkbox" checked={checked} className={baseStyles} />
-      <span className="mx-1"></span>
+      <span className="mx-2"></span>
       <input type="checkbox" className={baseStyles} />
     </div>
   );
