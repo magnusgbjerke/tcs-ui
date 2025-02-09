@@ -1,30 +1,15 @@
-"use client";
-
-export interface BreadcrumbItem {
-  title: string;
-  href: string;
-}
-
 interface Props {
-  items: Array<BreadcrumbItem> | [];
+  checked?: boolean;
 }
 
-function capitalizeFirstLetter(word: string): string {
-  if (!word) return "";
-  return word.charAt(0).toUpperCase() + word.slice(1);
-}
-
-export function Breadcrumbs({ items = [] }: Props) {
+export function Checkbox({ checked = false }: Props) {
+  const baseStyles =
+    "border border-gray-300 rounded focus:outline-none focus:ring-blue-500 placeholder-gray-400";
   return (
-    <>
-      <div className="flex">
-        {items.map((item, index) => (
-          <div key={index}>
-            <a href={item.href}>{capitalizeFirstLetter(item.title)}</a>
-            {index === items.length - 1 ? "" : " / "}
-          </div>
-        ))}
-      </div>
-    </>
+    <div className="ml-4">
+      <input type="checkbox" checked={checked} className={baseStyles} />
+      <span className="mx-1"></span>
+      <input type="checkbox" className={baseStyles} />
+    </div>
   );
 }
