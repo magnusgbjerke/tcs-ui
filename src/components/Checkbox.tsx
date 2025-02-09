@@ -1,13 +1,30 @@
-interface Props {
-  checked?: boolean;
+"use client";
+
+export interface BreadcrumbItem {
+  title: string;
+  href: string;
 }
 
-export function Checkbox({ checked = false }: Props) {
-  const baseStyles =
-    "border border-gray-300 rounded focus:outline-none focus:ring-blue-500 placeholder-gray-400";
+interface Props {
+  items: Array<BreadcrumbItem> | [];
+}
+
+function capitalizeFirstLetter(word: string): string {
+  if (!word) return "";
+  return word.charAt(0).toUpperCase() + word.slice(1);
+}
+
+export function Breadcrumbs({ items = [] }: Props) {
   return (
     <>
-      <input type="checkbox" checked={checked} className={`${baseStyles}`} />
+      <div className="flex">
+        {items.map((item, index) => (
+          <div key={index}>
+            <a href={item.href}>{capitalizeFirstLetter(item.title)}</a>
+            {index === items.length - 1 ? "" : " / "}
+          </div>
+        ))}
+      </div>
     </>
   );
 }
