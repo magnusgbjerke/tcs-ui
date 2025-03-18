@@ -1,6 +1,6 @@
-import HalfFilledHangerSVG from "../assets/half-filled-hanger.svg";
-import filledHangerSVG from "../assets/filled-hanger.svg";
-import EmptyHangerSVG from "../assets/hanger.svg";
+import FilledHangerSVG from "@/assets/filled-hanger.svg";
+import HalfFilledHangerSVG from "@/assets/half-filled-hanger.svg";
+import HangerSVG from "@/assets/hanger.svg";
 
 interface PropsHanger {
   type: "filled" | "half" | "empty";
@@ -10,20 +10,46 @@ interface PropsHanger {
 }
 
 function Hanger({ type = "filled", disabled, onClick, width }: PropsHanger) {
-  const hangerStyle = {
-    filled: filledHangerSVG,
-    half: HalfFilledHangerSVG,
-    empty: EmptyHangerSVG,
-  };
-
-  return (
-    <img
-      src={hangerStyle[type]}
-      width={width}
-      onClick={disabled ? undefined : onClick}
-      className={`${disabled ? "" : "cursor-pointer"}`}
-    />
-  );
+  switch (type) {
+    case "empty":
+      return (
+        <HangerSVG
+          onClick={disabled ? undefined : onClick}
+          className=""
+          style={{
+            height: `${width}px`,
+            width: `${width}px`,
+            cursor: disabled ? "default" : "pointer",
+          }}
+        />
+      );
+    case "half":
+      return (
+        <HalfFilledHangerSVG
+          onClick={disabled ? undefined : onClick}
+          className=""
+          style={{
+            height: `${width}px`,
+            width: `${width}px`,
+            cursor: disabled ? "default" : "pointer",
+          }}
+        />
+      );
+    case "filled":
+      return (
+        <FilledHangerSVG
+          onClick={disabled ? undefined : onClick}
+          className=""
+          style={{
+            height: `${width}px`,
+            width: `${width}px`,
+            cursor: disabled ? "default" : "pointer",
+          }}
+        />
+      );
+    default:
+      return null;
+  }
 }
 
 interface PropsRating {

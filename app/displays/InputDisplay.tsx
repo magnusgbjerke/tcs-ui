@@ -6,8 +6,8 @@ import { useState } from "react";
 export function InputDisplay() {
   const [state, setState] = useState("");
 
-  const handleInputChange = (value: string) => {
-    setState(value);
+  const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setState(event.target.value);
   };
 
   return (
