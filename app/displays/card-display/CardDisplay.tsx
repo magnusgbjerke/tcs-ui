@@ -1,4 +1,6 @@
-import { Card } from "../../../components/Card";
+"use client";
+
+import { Card } from "@/components/Card";
 import image from "./example-image.png";
 
 export function CardDisplay() {

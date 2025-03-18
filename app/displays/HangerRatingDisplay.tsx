@@ -1,5 +1,7 @@
+"use client";
+
+import { HangerRating } from "@/components/HangerRating";
 import { useState } from "react";
-import { HangerRating } from "../../components/HangerRating";
 
 export function HangerRatingDisplay() {
   const [value, setValue] = useState(3.5);

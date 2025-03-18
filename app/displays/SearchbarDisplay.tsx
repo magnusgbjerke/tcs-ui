@@ -1,5 +1,7 @@
+"use client";
+
+import { Searchbar } from "@/components/Searchbar";
 import { useState } from "react";
-import { Searchbar } from "../../components/Searchbar";
 
 export function SearchbarDisplay() {
   const exampleData = [
@@ -17,8 +19,9 @@ export function SearchbarDisplay() {
   const [results, setResults] = useState(exampleData);
 
   function onChangeHandler(query: string) {
+    /* eslint-disable-next-line */
     const filteredResults = exampleData.filter((item: any) =>
-      item.name.toLowerCase().includes(query)
+      item.name.toLowerCase().includes(query),
     );
     setResults(filteredResults);
   }

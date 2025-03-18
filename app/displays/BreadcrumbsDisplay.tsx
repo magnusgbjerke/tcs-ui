@@ -1,4 +1,4 @@
-import { Breadcrumbs, BreadcrumbItem } from "../../components/Breadcrumbs";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
 
 export function BreadcrumbsDisplay() {
   const itemsMockUp: Array<BreadcrumbItem> = [

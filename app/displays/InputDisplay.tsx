@@ -1,5 +1,7 @@
+"use client";
+
+import { Input } from "@/components/Input";
 import { useState } from "react";
-import { Input } from "../../components/Input";
 
 export function InputDisplay() {
   const [state, setState] = useState("");

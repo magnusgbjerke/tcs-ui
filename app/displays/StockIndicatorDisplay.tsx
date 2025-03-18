@@ -1,5 +1,7 @@
+"use client";
+
+import { StockIndicator } from "@/components/StockIndicator";
 import { useState } from "react";
-import { StockIndicator } from "../../components/StockIndicator";
 
 export function StockIndicatorDisplay() {
   const [state, setState] = useState(7);
