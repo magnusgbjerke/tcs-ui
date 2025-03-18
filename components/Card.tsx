@@ -32,6 +32,7 @@ export const Card: React.FC<Props> = ({
         height={height}
         width={width}
         alt="A image"
+        priority
       />
       <div className="p-4">{children}</div>
     </article>
