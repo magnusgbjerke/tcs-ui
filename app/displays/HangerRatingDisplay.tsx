@@ -30,6 +30,7 @@ export function HangerRatingDisplay() {
       </button>
       <HangerRating
         averageRating={value}
+        className="fill-yellow-300 stroke-black"
         disabled={disabled}
         onClick={(index) => {
           setHangerClicked(index + 1);
